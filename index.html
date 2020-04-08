@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="STYLES/default.css">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Form with JQuery</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="flex mg-bottom" id="btns">
+            <div><a  class="btn" data-toggle="modal" data-target="#exampleModalLongRegister"><i class="fa fa-file-signature"></i>Join us</a></div>
+             <!-- Modal -->
+             <div class="modal fade hidden" id="exampleModalLongRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title center" id="exampleModalLongTitle">Sign up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form" action="" method="POST">
+                            <div class="form-row">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" placeholder="Full name">
+                                <label class="error" for="name" id="name_error">This field is required.</label>
+                            </div>
+                            <div class="form-row">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="Email">
+                                <label class="error" for="email" id="email_error">This field is required.</label>
+                            </div>
+                            <div class="form-row">
+                                <label for="phnNo">Phone number</label>
+                                <input type="tel" name="phnNo" id="phnNo" placeholder="Phone number">
+                                <label class="error" for="phnNo" id="phn_error">This field is required.</label>
+                            </div>
+                            <div class="form-row">
+                                <label for="sector">Sector</label>
+                                <select name="sector">
+                                    <option  value="Select" selected>Select Sector</option>
+                                    <option value="Agriculture">Agriculture</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Technology">Technology</option>                               
+                                </select>
+                                <label class="error" for="sector" id="sector_error">Please select your sector.</label>
+                            </div>
+                            <button  class="btn" type="submit" onclick="submitForm()">submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <!--Old Button-->
+                        <a class="btn" type="button" id="submit-btn" onclick="submitForm()">Submit</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!--End-->
+        </div>
+    </div>   
+</body>
+<!--Bootstrap-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript" src="functions.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src= "form_validation.js"></script>
+</html>
