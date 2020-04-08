@@ -1,6 +1,6 @@
-function submitForm() {
+
     //$('.error').hide();
-    $(".btn").click(function() {
+    $("#subBut").click(function() {
       //$('.error').hide();
   	  var name = $("input#name").val();
   		if (name == "") {
@@ -25,11 +25,10 @@ function submitForm() {
         $("label#sector_error").show();
         $("select#sector").focus();
     }
-      
+    var dataString = 'name='+ name + '&email=' + email + '&phone=' + phone + '&sector=' + sector;
+    alert (dataString);
     });
-}
-var dataString = 'name='+ name + '&email=' + email + '&phone=' + phone + '&sector=' + sector;
-  alert (dataString);return false;
+
   /*$.ajax({
     type: "POST",
     url: "sendMail.php",
