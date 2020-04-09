@@ -14,56 +14,53 @@
 <body>
     <div class="wrapper">
         <div><a  class="btn" data-toggle="modal" data-target="#exampleModalLongRegister"><i class="fa fa-file-signature"></i>Join us</a></div>
-                 <!-- Modal -->
-                 <div class="modal fade hidden" id="exampleModalLongRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title center" id="exampleModalLongTitle">Sign up</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body">
-                            <form class="form" action="" method="POST" id="joinNowForm">
-                                <div class="form-row">
-                                    <label for="name">Name</label>
-                                    <input type="text" name="name" id="name" placeholder="Full name">
-                                    <label class="error" for="name" id="name_error">This field is required.</label>
-                                </div>
-                                <div class="form-row">
-                                    <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" placeholder="Email">
-                                    <label class="error" for="email" id="emailRequired_error">This field is required.</label>
-                                    <label class="error" for="email" id="email_error">Invalid email.</label>
-                                </div>
-                                <div class="form-row">
-                                    <label for="phnNo">Phone number</label>
-                                    <input type="tel" name="phnNo" id="phnNo" placeholder="Phone number">
-                                    <label class="error" for="phnNo" id="phn_error">Only numbers allowed.</label>
-                                    <label class="error" for="phnNo" id="phnNo_error">Phone number must be 11 digits.</label>
-                                    <label class="error" for="email" id="phnRequired_error">This field is required.</label>
-                                </div>
-                                <div class="form-row">
-                                    <label for="sector">Sector</label>
-                                    <select name="sector" id="sector">
-                                        <option value="Select" selected>Select Sector</option>
-                                        <option value="Agriculture">Agriculture</option>
-                                        <option value="Business">Business</option>
-                                        <option value="Technology">Technology</option>
-                                    </select>
-                                    <label class="error" for="sector" id="sector_error">Please select your sector.</label>
-                                </div>
-                                <button type="submit" class="btn" id="joinNowBtn">Register</button>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                           <!--<button type="submit" class="btn" id="joinNowBtn">Register</button>--> 
-                        </div>
-                    </div>
-                    </div>
+        <div class="modal fade hidden" id="exampleModalLongRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title center" id="exampleModalLongTitle">Become a Member</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 </div>
-                <!--End-->
+                <div class="modal-body">
+                    <form class="form"  id="joinusForm" onsubmit="return validateJoinForm()">
+                        <div class="form-row">
+                            <div id="errorMessage"></div>
+                        </div>
+                        <div class="form-row">
+                            <label for="Joinname">Name</label>
+                            <input type="text" name="Joinname" id="Joinname" placeholder="Full name">
+                            <label class="error" for="name" id="name_error">This field is required.</label>
+                        </div>
+                        <div class="form-row">
+                            <label for="Joinemail">Email</label>
+                            <input type="email" name="Joinemail" id="Joinemail" placeholder="Email">
+                            <label class="error" for="email" id="email_error">This field is required.</label>
+                        </div>
+                        <div class="form-row">
+                            <label for="JoinphnNo">Phone number</label>
+                            <input type="tel" name="JoinphnNo" id="JoinphnNo" placeholder="Phone number">
+                            <label class="error" for="phnNo" id="phn_error">This field is required.</label>
+                        </div>
+                        <div class="form-row">
+                            <label for="Joinsector">Sector</label>
+                            <select name="sector" id="Joinsector">
+                                <option value="" selected>Select Sector</option>
+                                <option value="Agriculture">Agriculture</option>
+                                <option value="Business">Business</option>
+                                <option value="Technology">Technology</option>                               
+                            </select>
+                            <label class="error" for="sector" id="sector_error">Please select your sector.</label>
+                        </div>
+                        <div class="form-row">
+                            <button  class="btn" type="submit" id="joinbtn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>   
 </body>
 <!--Bootstrap-->
@@ -75,5 +72,5 @@
   src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
   integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
   crossorigin="anonymous"></script>
-<script type="text/javascript" src= "form_validation.js"></script>
+  <script type="text/javascript" src= "multipleForm_validation.js"></script>
 </html>
